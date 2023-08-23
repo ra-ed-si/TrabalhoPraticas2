@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+menu {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    background-color: #065116;
+    z-index: 2;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+menu img {
+    height: 50px;
+    margin: 0px 20px;
+}
+
+menu h1{
+    color: #fff;
+    display: inline-block;
+}
+section.list {
+    position: relative;
+    overflow: hidden;
+}
+
+section.list ul {
+    height: 350px;
+    margin: 0 5px;
+    padding: 5px;
+
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+section.list ul li::before {
+    content: '';
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, black 50%, transparent);
+    transition: 1s;
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+/*section.list ul li:hover:before {
+    bottom: 0px;
+}
+
+section.list ul li:hover img {
+    transform: translateY(-50px);
+    filter: blur(5px)
+}*/
+
+section.list ul li {
+    background-color: white;
+    min-width: 250px;
+    height: 300px;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 5px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+section.list ul li img {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition-delay: 1s;
+}
+
+section.list ul::-webkit-scrollbar {
+    display: none;
+}
+
+section.list ul li div.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 2;
+    color: white;
+    transition: 1s;
+    transition-delay: 1s;
+}
+section.list ul li div.details span {
+    font-size: 12px;
+}
+section.list ul li div.details input:checked + section.book{
+    display: flex;
+}
+section.list ul li div.details section.book{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+section.list ul li div.details section.book div.openBook{
+    width: 600px;
+    height: 300px;
+    background-color: #ff0049;
+    display: block;
+    margin: auto;
+}
